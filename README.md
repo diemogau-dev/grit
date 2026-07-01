@@ -152,6 +152,24 @@ No requiere variables de entorno.
 
 ---
 
+## Seguridad de dependencias
+
+Este repo tiene **Dependabot** activado (`.github/dependabot.yml`), que revisa
+`npm` semanalmente y abre un PR automático apenas se publica un parche para
+una vulnerabilidad conocida en `next`, `react` o cualquier otra dependencia.
+
+Antes de cada deploy importante, correr:
+
+```bash
+npm run audit
+```
+
+Si aparece algo en `high` o `critical`, actualizar la dependencia señalada
+(`npm install <paquete>@latest`) y volver a correr `npm run build` antes de
+pushear a `main`.
+
+---
+
 ## Notas de marca
 
 El tono es **auténtico, exigente sin juzgar, optimista pero realista**. Nunca
