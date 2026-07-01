@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Base — Sistema visual Grit v2
+   ============================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Desplaza el ancla debajo del header sticky */
+    scroll-padding-top: 72px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: theme("colors.tinta");
+    color: theme("colors.hueso");
+    font-family: theme("fontFamily.inter");
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Respeta la preferencia de reducir movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Etiqueta superior de sección: punto + nombre en monospace */
+  .grit-label {
+    @apply flex items-center gap-[9px] font-mono text-[11px] uppercase tracking-[0.2em] text-gris-medio;
+  }
+
+  /* Botón primario (tierra) */
+  .btn-tierra {
+    @apply inline-flex items-center justify-center rounded-full bg-tierra px-[17px] py-[9px] font-inter text-[12px] font-semibold text-tinta transition-colors duration-200 hover:bg-tierra-oscura;
+  }
+
+  /* Botón claro (hueso sobre oscuro) */
+  .btn-hueso {
+    @apply inline-flex items-center justify-center rounded-full bg-hueso px-[26px] py-[15px] font-archivo text-[15px] font-bold text-tinta transition-colors duration-200 hover:bg-[#e2dccf];
+  }
+}
