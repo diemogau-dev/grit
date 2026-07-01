@@ -1,5 +1,5 @@
+import Image from "next/image";
 import SectionLabel from "./ui/SectionLabel";
-import ImageSlot from "./ui/ImageSlot";
 import ProductSpec from "./ui/ProductSpec";
 import { PRODUCT_SPECS } from "@/lib/content";
 
@@ -21,20 +21,26 @@ export default function Producto() {
         </h2>
 
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-14">
-          {/* Fotos (image-slots rellenables) */}
+          {/* Fotos de producto */}
           <div className="mb-[26px] grid grid-cols-[1.3fr_1fr] gap-[10px] lg:mb-0">
-            <ImageSlot
-              id="grit-producto-muneca"
-              radius={6}
-              placeholder="Foto en la muñeca · uso real"
-              className="aspect-[3/4] w-full"
-            />
-            <ImageSlot
-              id="grit-producto-cruz"
-              radius={6}
-              placeholder="Detalle · la cruz bordada"
-              className="aspect-[3/4] w-full"
-            />
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[6px]">
+              <Image
+                src="/img/producto-muneca.jpg"
+                alt="Pulsera Grit puesta en la muñeca — uso real"
+                fill
+                sizes="(max-width: 1024px) 55vw, 28vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[6px]">
+              <Image
+                src="/img/producto-cruz.jpg"
+                alt="Detalle de la cruz bordada en la pulsera Grit"
+                fill
+                sizes="(max-width: 1024px) 42vw, 22vw"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           {/* Copy + specs */}
