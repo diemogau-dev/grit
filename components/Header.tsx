@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
  */
 const NAV_LINKS = [
   { href: "#ritual", label: "El ritual" },
+  { href: "#contenido", label: "El contenido" },
   { href: "#producto", label: "Producto" },
   { href: "#faq", label: "FAQ" },
 ];

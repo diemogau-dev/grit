@@ -35,6 +35,33 @@ export const RITUAL_STEPS = [
   },
 ] as const;
 
+/** Vista previa del mensaje diario que se muestra en la sección "El contenido". */
+export const CONTENIDO_EJEMPLO = {
+  etiqueta: "GRIT · HOY",
+  fecha: "Martes, 14 de julio",
+  texto: "«Todo lo puedo en Cristo que me fortalece.»",
+  referencia: "Filipenses 4:13",
+  accion: "Hoy: elegí lo difícil, y hacelo de todos modos.",
+} as const;
+
+export const CONTENIDO_TIPOS = [
+  {
+    titulo: "Versículo del día",
+    descripcion:
+      "Un fragmento breve de la Escritura. Distinto cada día, nunca el mismo dos veces seguidas.",
+  },
+  {
+    titulo: "Reflexión",
+    descripcion:
+      "Una idea corta para bajarlo a tierra. Sin sermón, sin relleno, sin vueltas.",
+  },
+  {
+    titulo: "Recordatorio",
+    descripcion:
+      "Una frase de disciplina o propósito, para los días en que la fe sola no alcanza y hace falta empuje.",
+  },
+] as const;
+
 export const PRODUCT_SPECS = [
   { label: "Material", valor: "Tejido elástico premium, tacto suave" },
   { label: "Símbolo", valor: "Cruz bordada, no estampada" },

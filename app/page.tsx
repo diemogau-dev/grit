@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Manifiesto from "@/components/Manifiesto";
 import Ritual from "@/components/Ritual";
+import Contenido from "@/components/Contenido";
 import Producto from "@/components/Producto";
 import FePrimero from "@/components/FePrimero";
 import ProximasCategorias from "@/components/ProximasCategorias";
@@ -22,6 +23,7 @@ export default function Home() {
         <Hero />
         <Manifiesto />
         <Ritual />
+        <Contenido />
         <Producto />
         <FePrimero />
         <ProximasCategorias />
