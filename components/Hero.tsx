@@ -17,9 +17,9 @@ export default function Hero() {
           </SectionLabel>
 
           <h1 className="m-0 font-archivo text-[60px] font-black uppercase leading-[0.92] tracking-[-0.03em] md:text-[74px]">
-            Fe que
+            Tu versículo diario,
             <br />
-            acompaña<span className="text-tierra">.</span>
+            siempre con vos<span className="text-tierra">.</span>
           </h1>
 
           <p className="m-0 mt-6 max-w-[380px] text-[17px] leading-[1.55] text-gris-copy">
