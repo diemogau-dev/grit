@@ -168,6 +168,177 @@ export const FAQS: FAQ[] = [
   },
 ];
 
+/* ============================================================
+   Página de producto (/producto)
+   ============================================================ */
+
+export type ProductoImagen = { src: string; alt: string };
+
+/** Galería de fotos — reusa las fotos de producto ya existentes en /public/img. */
+export const PRODUCTO_GALERIA: ProductoImagen[] = [
+  { src: "/img/producto.jpg", alt: "Pulseras Grit — Colección Fe" },
+  { src: "/img/producto-muneca.jpg", alt: "Pulsera Grit puesta en la muñeca" },
+  { src: "/img/producto-cruz.jpg", alt: "Detalle de la cruz bordada en la pulsera Grit" },
+  { src: "/img/producto-par.jpg", alt: "Par de pulseras Grit" },
+  { src: "/img/producto-logo.jpg", alt: "Detalle del logo Grit bordado" },
+];
+
+export type ProductoBundle = {
+  id: string;
+  cantidad: number;
+  nombre: string;
+  etiqueta: string;
+  precio: number;
+  badge?: string;
+};
+
+/** Precios placeholder — reemplazar por los precios reales del catálogo. */
+export const PRODUCTO_BUNDLES: ProductoBundle[] = [
+  {
+    id: "1",
+    cantidad: 1,
+    nombre: "1 Pulsera GRIT",
+    etiqueta: "Perfecta para empezar tu hábito diario",
+    precio: 79000,
+  },
+  {
+    id: "2",
+    cantidad: 2,
+    nombre: "2 Pulseras GRIT",
+    etiqueta: "Una para vos y otra para regalar",
+    precio: 199000,
+    badge: "Más popular",
+  },
+  {
+    id: "3",
+    cantidad: 3,
+    nombre: "3 Pulseras GRIT",
+    etiqueta: "Para vos y toda tu familia",
+    precio: 269000,
+    badge: "Ahorra más",
+  },
+];
+
+/** Rating agregado que se muestra junto al título del producto y en opiniones. */
+export const PRODUCTO_RATING = { promedio: 4.9, total: 23 } as const;
+
+export const PRODUCTO_PASOS = [
+  {
+    titulo: "Ponete la pulsera",
+    descripcion:
+      "Ajustala a tu muñeca. Es elástica, cómoda y de talle único: se adapta a la mayoría.",
+  },
+  {
+    titulo: "Acercá tu celular",
+    descripcion:
+      "Un toque simple, sin apps ni configuraciones. Funciona con cualquier smartphone moderno.",
+  },
+  {
+    titulo: "Recibí tu versículo",
+    descripcion:
+      "Un mensaje breve, distinto cada día: versículo, reflexión o recordatorio de propósito.",
+  },
+] as const;
+
+export const PRODUCTO_RECORDATORIO_PUNTOS = [
+  "Te ayuda a crear un hábito diario de fe",
+  "Te recuerda volver a lo que depende de vos",
+  "Es simple, rápido y sin fricción",
+] as const;
+
+export const PRODUCTO_BENEFICIOS = [
+  {
+    titulo: "Tu fe en segundos",
+    descripcion: "Un toque y accedés al mensaje del día. Sin scroll, sin distracciones.",
+  },
+  {
+    titulo: "Siempre con vos",
+    descripcion: "La llevás puesta todo el día: entreno, trabajo, rutina.",
+  },
+  {
+    titulo: "Sin apps ni batería",
+    descripcion: "Tecnología NFC pasiva. No se carga, no se actualiza, no falla.",
+  },
+  {
+    titulo: "Un regalo con propósito",
+    descripcion: "Para vos o para alguien que necesita un recordatorio diario.",
+  },
+  {
+    titulo: "Diseño simple",
+    descripcion: "Minimalista, cómoda y pensada para durar en tu día a día.",
+  },
+  {
+    titulo: "Experiencia digital",
+    descripcion: "Contenido que se renueva solo, sin que tengas que hacer nada.",
+  },
+] as const;
+
+export const PRODUCTO_INCLUYE = [
+  "Pulsera NFC Grit",
+  "Acceso a versículos y reflexiones diarias",
+  "Instrucciones simples de uso",
+  "Packaging premium, listo para regalar",
+  "Soporte por WhatsApp",
+] as const;
+
+export const PRODUCTO_REGALO_ITEMS = [
+  {
+    titulo: "Para vos",
+    descripcion: "Un recordatorio diario de quién decidiste ser.",
+  },
+  {
+    titulo: "Para tu pareja",
+    descripcion: "Una forma simple de acompañar su fe.",
+  },
+  {
+    titulo: "Para un amigo",
+    descripcion: "Un gesto con significado, no solo un objeto.",
+  },
+  {
+    titulo: "Para quien lo necesita",
+    descripcion: "Alguien que atraviesa un momento difícil y necesita un empujón.",
+  },
+] as const;
+
+export type ProductoOpinion = {
+  quote: string;
+  nombre: string;
+  ubicacion: string;
+  rating: number;
+};
+
+/** Opiniones placeholder — reemplazar por reseñas reales de clientes. */
+export const PRODUCTO_OPINIONES: ProductoOpinion[] = [
+  {
+    quote:
+      "La toco antes de entrenar y antes de orar. Es el mismo gesto: acordarme de quién quiero ser.",
+    nombre: "Nombre Apellido",
+    ubicacion: "Asunción, PY",
+    rating: 5,
+  },
+  {
+    quote:
+      "Pensé que era otro accesorio más. Terminó siendo el recordatorio que más necesitaba en el día.",
+    nombre: "Nombre Apellido",
+    ubicacion: "Luque, PY",
+    rating: 5,
+  },
+  {
+    quote:
+      "Se lo regalé a mi hermana y ahora las dos la usamos. Simple, pero significa mucho.",
+    nombre: "Nombre Apellido",
+    ubicacion: "Ciudad del Este, PY",
+    rating: 5,
+  },
+  {
+    quote:
+      "No hace falta ninguna app. La toco y ya está: un versículo, treinta segundos, listo.",
+    nombre: "Nombre Apellido",
+    ubicacion: "Encarnación, PY",
+    rating: 5,
+  },
+];
+
 /** Enlaces de contacto / redes. Centralizados para reusar en CTA y footer. */
 export const LINKS = {
   // Número placeholder de Paraguay — reemplazar por el real.
